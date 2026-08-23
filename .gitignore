@@ -1,0 +1,32 @@
+# Local Python environments and caches
+venv/
+venv312/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Datasets and generated model/runtime artifacts
+dataset/
+dataset_fast/
+fusion_dataset/
+runs/
+fusion_engine/model/
+*.pt
+*.onnx
+*.joblib
+*.pkl
+
+# Local data, logs, and generated reports
+*.csv
+*.log
+logs/
+session_history/
+runtime/
+study_session_summary.txt
+personalization/personal_activity_log.csv
+personalization/user_profile.json
+
+# Local and editor files
+.env
+.venv/
+.vscode/

@@ -1,0 +1,15 @@
+numpy
+opencv-python
+ultralytics
+mediapipe
+psutil
+pyautogui
+keyboard
+mouse
+SpeechRecognition
+PyAudio
+scikit-learn
+joblib
+pandas
+Pillow
+python-dotenv
