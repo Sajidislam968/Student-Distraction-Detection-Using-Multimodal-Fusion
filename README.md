@@ -27,7 +27,6 @@ Unlike conventional vision-only approaches, FocusMonitor integrates digital acti
 
 **Results**
 <img width="1366" height="523" alt="image" src="https://github.com/user-attachments/assets/193f8a15-6c15-4f68-8ae0-ae4bacf7d9cc" />
-<img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/fa4a8811-099f-4bc8-975a-404f0b4fa185" />
 <img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/6375cf76-72ec-46a7-82c0-f2ecb40dda5b" />
 
 
