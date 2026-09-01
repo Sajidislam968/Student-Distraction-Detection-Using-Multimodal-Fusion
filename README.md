@@ -1,60 +1,37 @@
-# Student Distraction Detection Using Multimodal Fusion
+# FocusMonitor: A Context-Aware Multimodal Framework for Real-Time Study Distraction Detection
 
-## Abstract
+Maintaining concentration during computer-based learning is increasingly challenging due to constant digital distractions such as social media, messaging applications, entertainment platforms, and frequent task switching. Most existing distraction detection systems rely on a single source of information—typically facial cues or gaze estimation—which makes them less reliable for identifying real-world study behavior.
 
-Maintaining concentration during study sessions is difficult when distractions arise from multiple sources, including unsuitable applications, background audio, keyboard and mouse activity, and changes in facial or head orientation. This project presents a real-time student focus monitoring system that combines computer vision, audio analysis, application activity, and input-device signals. The system uses face and eye tracking, head-pose estimation, object detection, speech and noise analysis, active-window classification, and a fusion engine to estimate the learner's focus state. A dashboard and session logger provide live feedback and summarize focus-related events over time. The modular design allows each sensing component to operate independently while enabling multimodal fusion for a more robust distraction estimate. The repository contains the source code, training and evaluation scripts, and test modules. Datasets, generated logs, personal activity records, model weights, and virtual environments are intentionally excluded from version control and can be added locally when needed.
+**FocusMonitor** is a context-aware multimodal AI framework designed to monitor students' study engagement in real time using only a standard laptop. Instead of depending on a single modality, the system combines computer vision, user interaction, application context, audio context, and surrounding object detection to obtain a comprehensive understanding of a learner's study state.
 
-> This abstract is a working draft and can be updated later.
+The framework analyzes facial attention, eye closure, head orientation, keyboard and mouse activity, active application semantics, speech context, and nearby objects. These heterogeneous signals are synchronized and fused using an XGBoost-based decision model to classify four study states: **Focused**, **Distracted**, **Neutral**, and **Absent**. To improve reliability in real-world scenarios, FocusMonitor incorporates context-aware decision rules, temporal smoothing, persistent distraction alerts, and an interactive Streamlit dashboard for real-time feedback and session analytics.
 
-## Features
+Unlike conventional vision-only approaches, FocusMonitor integrates digital activity with physical behavior, allowing it to distinguish situations where a student appears attentive while using distracting applications, or appears inactive while genuinely studying. The framework operates on standard laptop hardware without requiring wearable devices or specialized sensors, making it suitable for intelligent learning environments, online education, and AI-assisted self-study support.
 
-- Face, eye, and head-pose monitoring
-- Focus-object detection with YOLO-based scripts
-- Active application classification
-- Audio, speech, and noise monitoring
-- Keyboard and mouse activity monitoring
-- Multimodal focus prediction through a fusion engine
-- Live dashboard and study-session logging
-- Personalization and session-level analysis modules
+**Key Features**
+• Context-aware multimodal fusion
+• Real-time distraction monitoring
+• Four-state attention classification
+• Computer vision using OpenCV + MediaPipe
+• Active application understanding using TF-IDF + Linear SVM
+• Object detection using YOLOv8
+• Keyboard & mouse behavior analysis
+• Audio context recognition
+• XGBoost decision fusion
+• Temporal smoothing
+• Streamlit analytics dashboard
+• CPU-friendly architecture
 
-## Project Structure
+**System Architecture**
+<img width="1025" height="578" alt="image" src="https://github.com/user-attachments/assets/38b0be97-ad18-4c17-9c0b-a03d27cc26d3" />
 
-| Path | Description |
-| --- | --- |
-| `integrated_monitor.py` | Main multimodal monitoring entry point |
-| `run_focusmonitor.py` | Focus monitor runner |
-| `dashboard/` | Dashboard interface and supporting scripts |
-| `audio/` | Audio, speech, and noise analysis modules |
-| `app_classifier/` | Active-window and application classification |
-| `fusion_engine/` | Multimodal prediction and training scripts |
-| `personalization/` | User-specific activity components |
-| `*_monitor.py` | Individual input and computer-vision monitors |
-| `test_*.py` | Focused test and evaluation scripts |
+**Results**
+<img width="1366" height="523" alt="image" src="https://github.com/user-attachments/assets/193f8a15-6c15-4f68-8ae0-ae4bacf7d9cc" />
+<img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/fa4a8811-099f-4bc8-975a-404f0b4fa185" />
+<img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/6375cf76-72ec-46a7-82c0-f2ecb40dda5b" />
 
-## Setup
 
-Use Python 3.12 or a compatible Python 3 environment, then install the dependencies required by the modules you plan to run:
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
 
-Some modules may require system-level access to a camera, microphone, active-window information, or input-device events. Local model weights and datasets are not included in this repository.
 
-## Running
 
-```bash
-python integrated_monitor.py
-```
-
-Individual modules and tests can be run directly with Python when their local data and model requirements are available.
-
-## Data and Privacy
-
-Datasets, CSV files, logs, runtime status files, personal activity records, generated reports, model weights, and virtual environments are excluded through `.gitignore`. Keep any locally collected data outside public version control and review the ignore rules before adding new artifacts.
-
-## License
-
-No license has been selected yet.
