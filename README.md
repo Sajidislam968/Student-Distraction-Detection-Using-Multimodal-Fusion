@@ -25,9 +25,17 @@ Unlike conventional vision-only approaches, FocusMonitor integrates digital acti
 **System Architecture**
 <img width="1025" height="578" alt="image" src="https://github.com/user-attachments/assets/38b0be97-ad18-4c17-9c0b-a03d27cc26d3" />
 
-**Results**
+**Dataset And Results**
+<img width="517" height="125" alt="image" src="https://github.com/user-attachments/assets/6de46317-f640-4e83-adfd-5752b2bb613b" />
+<img width="517" height="125" alt="image" src="https://github.com/user-attachments/assets/ba7b4614-2627-4c5d-9fcf-8c4861ff2211" />
+<img width="517" height="155" alt="image" src="https://github.com/user-attachments/assets/447e0730-58a8-407b-87b6-df5c91c12ec7" />
+
+**Output**
 <img width="1366" height="523" alt="image" src="https://github.com/user-attachments/assets/193f8a15-6c15-4f68-8ae0-ae4bacf7d9cc" />
 <img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/6375cf76-72ec-46a7-82c0-f2ecb40dda5b" />
+
+Short video on this project.
+https://drive.google.com/file/d/1mpOd5qOy5-QtxjhqEwl8teYaxr32a9lO/view?usp=sharing
 
 
 
